@@ -1,0 +1,28 @@
+<!--Per creare una tabella è possibile utilizzare la funzione <table> e al suo interno altre funzioni che determinano
+    come la tabella verrà impostata: La funzione <tr>, che sta per "table row", contiene gli elementi di una specifica
+    riga. La funzione <th> invece determina quell'elemento "titolo" della colonna, mentre <td> è la funzione che
+    contiene gli elementi di quella colonna.-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Random Table</title>
+    </head>
+    <body>
+        <h1>% of pigs in different countries</h1>
+        <table bgcolor="black" height="100"> <!--Il keyword argument "bgcolor" determina il colore di background, accetta sia stringhe che valori hex-->
+            <tr bgcolor="#731414">
+                <th width="100">Cina</th>
+                <th width="100">Europa</th>
+                <th width="100">America</th>
+                <th width="100">Russia</th> 
+            </tr>
+            <tr bgcolor="#bf4545" align="center"> <!--Il keyword argument "align", come dice il nome, allina ciò a cui è stato inserito il keyword argument (quindi in questo caso tutti gli elementi di questa riga) a qualcosa di specifico, in questo caso al centro-->
+                <td>46%</td>
+                <td>13,8%</td>
+                <td>7,6%</td>
+                <td>2,5%</td>
+            </tr>
+        </table>
+    </body>
+</html>
