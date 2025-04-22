@@ -1,0 +1,19 @@
+<!--Per poter inserire file audio nel proprio file html è possibile utilizzare il tag <audio>-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>california girls music</title>
+    </head>
+    <body>
+        <audio controls> <!--L'attributo "controls" aggiunge una barra, contenente il file audio, con diversi widget utilizzabili (mettere in pausa, regolare l'audio ecc..)-->
+            <source src="sounds/california_girls.mp3"> <!--Con il tag <source> e l'attributo "src" stiamo inserendo il formato del file che può leggere il browser.-->
+            <source src="sounds/california_girls.wav">
+            This browser does not support HTML5 audios. <!--Questo messaggio compare qualora il browser non accetti nessun formato specificato sopra.-->
+        </audio>
+    </body>
+</html>
+
+<!--Come altri attributi del tag <audio> esiste "autoplay", che fa partire l'audio fin da subito, 
+    oppure "muted", che di default imposta l'audio a zero
+    e infine "loop" che mette in loop l'audio.-->
