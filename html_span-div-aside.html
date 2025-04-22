@@ -1,0 +1,45 @@
+<!--
+Il tag <span> permette di modificare gli attributi di porzioni di testo
+all'interno di un paragrafo, un titolo, ecc. Viene usata per modificare 
+una parte specifica di testo senza modificare tutto il blocco di testo.
+
+Il tag <div>, invece, è un contenitore che serve per raggruppare più tags su uno stesso blocco.
+È utile per organizzare il codice e applicare gli stessi attributi a un intero gruppo di tags,
+senza doverli ripetere uno per uno.
+
+Il tag <aside> è simile a un <div> nel senso che contiene altri elementi, ma viene usato per contenuti secondari come curiosità, approfondimenti ecc. 
+Questi contenuti sono collegati al contenuto principale, ma non ne fanno parte direttamente.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>div and span</title>
+    </head>
+    <body>
+        <div class="text-one"> <!--L'attributo "class" da un nome ad una specifica div.-->
+            <h1>Modified Text</h1>
+            <p>
+                Lorem ipsum dolor sit amet, <span style="color: red;">consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+                Aenean massa.</span> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+                Nulla consequat massa quis enim.
+            </p>
+        </div>
+        <div class="text-two">
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+                Nulla consequat massa quis enim.
+            </p>
+        </div>
+        <aside>
+            <h1>Curiosity<h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            </p>
+        </aside>
+    </body>
+</html>
