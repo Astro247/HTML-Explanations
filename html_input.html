@@ -1,0 +1,79 @@
+<!--
+Il tag <form> contiene dei tag che permettono l'inserimento dati e che questi ultimi possano essere spediti con l'attributo "action"
+Ad un'altro file dove saranno salvati, con l'attributo "method" invece si determina se i dati inseriti saranno visibili nell'URL della pagina,
+qualora method sia impostato a GET, oppure che rimangano segreti e non visibili nell'URL, con method impostato a POST.
+
+Il tag <input> è un entry nella quale è possibile inserire un tipo specifico di dato determinato dall'attributo "type", ad esempio
+il type "email" permette solo l'inserimento di email e non testi a caso, "password" nasconde il testo inserito, "text" permette l'inserimento
+di testo in piena libertà e così via.
+L'attributo "list", associato al nome di una lista, si collega ad un tag <datalist> con un'attributo "id" che deve avere lo stesso nome associato
+all'attributo "list" nel tag "input". Questo tag contiene ulteriori tag "option" associati ad un testo che apparirà come suggerimento all'entry.
+
+Il tag <label> inserisce, come dice il nome, un label accanto ad un input.
+
+Il tag <select> crea una droplist contenente diversi valori inseriti in dei tag <option>.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Website with Inputs</title>
+    </head>
+    <body>
+        <fieldset> <!--Questo tag crea un frame modificato.-->
+            
+            <legend>Written Email</legend> <!--Quest'altro tag crea un titolo al fieldset-->
+            <form action="invia_dati.py" method="POST"> <!--In questo caso, con method impostato a "POST", i dati non saranno visibili nell'URL-->
+                
+                <div>
+                    <input type="date">
+                </div>
+
+                <div class="ask_for_text_inputs">
+                    <h3>Personal Informations</h3>
+                    <written>
+                    <label for="email">Email:</label> <!--L'attributo "for" si riferisce all'id dell'input, non al suo name.-->
+                    <input type="email" name="email" id="email" placeholder="Insert Email" list="possible_emails" required> <!--L'attributo "name" serve ad identificare quell'input e inviarne i dati al file selezionato nell'action del from, mentre l'attributo "id" serve ad identificare quello specifico input e poterlo 'richiamare' in altri elementi html, css ecc. Infine l'attributo "placeholder" genera un testo nell'entry che verrà eliminato nel momento in cui l'utente ci scrive qualcosa.-->
+                    <datalist id="possible_emails">
+                        <option value="example@gmail.com">
+                        <option value="example@hotmail.com">
+                        <option value="example@libero.it">
+                    </datalist>
+                    <label for="pass">Password:</label> <!--L'attributo "for" si riferisce all'id dell'input, non al suo name.-->
+                    <input type="password" name="pass" id="pass" placeholder="Insert Password" required>
+                </div>
+
+                <div class="ask_for_select">
+                    <label for="residence">Select Residence:</label>
+                    <select name="residence", id="residence">
+                        <option value="-">-</option>
+                        <option value="US">US</option>
+                        <option value="IT">IT</option>
+                        <option value="EN">EN</option>
+                    </select>
+                </div>
+
+                <div class="ask_gender">
+                    <input type="radio" name="gender" value="m"> Male
+                    <input type="radio" name="gender" value="f"> Female
+                    <input type="radio" name="gender" value="ns"> Not Specified
+                </div>
+
+                <div class="write_email">
+                    <h3>Text Area</h3>
+                    <textarea></textarea> <!--Questo tag permette la scrittura libera di testo in una textarea, come dice il nome, non limitandosi allo spazio di un'entry.-->
+                </div>
+
+                <div class="submit/cancel_button">
+                    <button type="button">submit</button> <!--Questo tag crea un pulsante.-->
+                    <button type="button">cancel</button>
+                </div>
+
+            </form>   
+        </fieldset>
+    </body>
+</html>
+
+<!--Impostando l'attributo "type" del tag "input" a "radio" e definendo per ogni input uno stesso attributo "name" comune a tutti, non sarà più possibile selezionare molteplici
+elementi, ma soltanto uno.
+Questo procedimento non è fattibile con il type "checkbox".-->
