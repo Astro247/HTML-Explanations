@@ -1,0 +1,23 @@
+<!--
+Il tag <meta> fornisce informazioni al browser sulla pagina web. Viene inserito all'interno del <head>,
+quindi non mostra contenuti visibili sulla pagina, ma comunica dati utili per la gestione della pagina,
+come la codifica di caratteri speciali, la descrizione per i motori di ricerca ecc..
+
+Il tag <link> permette il collegamento con un'altro file grazie all'attributo "href", che prende 
+la path del file alla quale si vuole collegare.
+L'attributo rel, invece, indica la relazione tra il file HTML e il file collegato.
+Ad esempio, rel="icon" dice all’HTML che il file è una favicon, mentre rel="stylesheet" specifica che si tratta di un file CSS.
+-->
+
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8"> <!--L'attributo "charset" specifica alla pagina quale set di caratteri deve utilizzare (può utilizzare anche ASCII volendo, ma UTF-8, che sarebbe unicode, permette la lettura di qualsiasi tipo di carattere).-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Questo meta invece fa sì che la pagina web si adatti automaticamente a dispositivi diversi da un monitor di un pc (come tablet o telefono).-->
+        <meta name="description" content="website test with different tags in the head tag"> <!--Questo meta spiega in cosa consiste il website creato-->
+        <meta name="author" content="astro"> <!--Infine, questo meta specifica l'autore della pagina.-->
+        
+        <title>meta explained</title>
+        <link rel="icon" href="dragon_ball_image.png" type="image/x-icon"> <!--Aggiunge una favicon al sito.-->
+    </head>
+</html>
